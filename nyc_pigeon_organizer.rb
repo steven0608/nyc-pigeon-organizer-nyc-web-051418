@@ -4,8 +4,8 @@ def nyc_pigeon_organizer(data)
     secondLevel.each do |cgl_value,value|
       value.each do |name|
         pigeon_list[name] ||= {}
-        pigeon_list[name][cgl] ||= [cgl_value.to_s]
-        #pigeon_list[name][cgl] += [cgl_value.to_s]
+        pigeon_list[name][cgl] ||= []
+        pigeon_list[name][cgl] << [cgl_value.to_s]
       end
     end
   end
